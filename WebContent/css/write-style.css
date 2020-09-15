@@ -1,0 +1,64 @@
+@charset "UTF-8";
+@import "myreset.css";
+@import "header.css";
+@import "footer.css";
+@import "mycommon.css";
+
+/* ///TITLE////////////////////////// */
+#title {
+	height: 160px;
+	background-color: #4c5564;
+	margin-bottom: 38px;
+}
+
+#title div span{
+	color: #fff;
+	line-height: 160px;
+	vertical-align: middle;
+}
+
+#title div span:first-child{
+	font-size: 38px;
+	font-weight: 700;
+	border-right: 1px solid #fff;
+	padding-right: 20px;
+}
+#title div span:last-child{
+	padding-left: 20px;
+}
+
+/* ////main/////////////////////////// */
+
+/* /////////////////////////////// */
+#write input, #write textarea {
+	width: 100%;
+	padding: 0.5em 1em;
+	font-size: 15px;
+}
+
+#write ul li input:focus{
+	outline-color: aqua;
+}
+#write ul>li{
+	margin: 18px 0;
+}
+
+#write ul>li:first-child{
+	display: flex;
+}
+
+#write ul>li span{
+	width: 60px;
+}
+#write p{
+	color: #777;
+	font-size: 14px;
+}
+
+#write ul>li:last-child {
+	display: flex;
+	justify-content: flex-end;
+}
+
+
+

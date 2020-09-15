@@ -1,0 +1,135 @@
+@charset "UTF-8";
+@import "myreset.css";
+@import "header.css";
+@import "footer.css";
+@import "mycommon.css";
+
+/* ///TITLE////////////////////////// */
+#title {
+	height: 160px;
+	background-color: #4c5564;
+	margin-bottom: 38px;
+}
+
+#title div span{
+	color: #fff;
+	line-height: 160px;
+	vertical-align: middle;
+}
+
+#title div span:first-child{
+	font-size: 38px;
+	font-weight: 700;
+	border-right: 1px solid #fff;
+	padding-right: 20px;
+}
+#title div span:last-child{
+	padding-left: 20px;
+}
+
+/* ////main/////////////////////////// */
+
+
+
+/* /////////////////////////////// */
+.board-width{
+	width: 880px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+#detail{
+	
+	background-color: #f8f8f8;
+	padding: 24px;
+}
+#detail li{
+	margin: 18px 0;
+}
+#detail .subject{
+	font-size: 32px;
+	font-weight: 700;
+}
+#detail .wdc{
+	color: #777;
+}
+#detail .wdc span{
+	padding: 0 1em;
+	border-left: 1px solid #eee;
+}
+
+#detail .wdc span:first-child{
+	padding-left: 0;
+	border-left:none;
+}
+
+#detail .content textarea{
+	width: 100%;
+	height: 400px;
+	padding: 0.7em;
+}
+
+#btn {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* edit///////////////////// */
+
+#edit input, #edit textarea {
+	width :100%;
+	padding: 0.7em;
+}
+#edit textarea{
+	height: 400px;
+}
+#edit ul li{
+	margin: 18px 0;
+}
+#edit ul li:first-child{
+	display: flex;
+	line-height: 36px;
+}
+#edit ul li span{
+	width: 80px;
+	display: inline-block;
+}
+#edit ul li p{
+	color: #777;
+	font-size: 14px;
+}
+
+#btn-reply{
+	display: none;
+	width: 74px;
+	height: 50px;
+	vertical-align: middle;
+}
+#reply #in #reply-in{
+	width: 800px;
+	height: 50px;
+	margin: 36px 0;
+}
+
+#reply #out ul.reply-item{
+	border-bottom: 1px solid #e9e9e9;
+	padding: 15px;
+}
+#reply #out ul.reply-item li:first-child{
+	font-weight: 700;
+	color: #777;
+}
+
+#reply #out ul li:last-child{
+	color: #777;
+	display: flex;
+	justify-content: space-between;
+}
+#reply #out ul li .recommend{
+	border: 1px solid #e9e9e9;
+	padding: 0.5em;	
+}
+#reply #out ul li .recommend:hover{
+	cursor: pointer;
+}
+
+

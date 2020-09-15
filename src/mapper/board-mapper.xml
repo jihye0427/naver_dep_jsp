@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board">
+
+	<select id="boardList" resultType="dto.BoardDTO" resultSetType="SCROLL_SENSITIVE">
+		select * from board order by no desc
+	</select>
+ 
+ 	<select id="boardTotal" resultType="int">
+ 		select count(*) from board
+ 	</select>
+ 	
+ 	<insert id="insetBoard">
+ 		<selectKey keyProperty="no" resultType="int" order="BEFORE">
+ 			select seq_board.nextval from dual
+ 		</selectKey>
+ 		insert into board(no, subject, count, writer, reg_date, user_ip, content)
+ 		values(#{no}, #{subject}, 0, #{writer}, sysdate ,#{user_ip}, #{content})
+ 	</insert>
+ 	<select id="detail" resultType="dto.BoardDTO">
+ 		select * from board
+ 		where no=#{no}
+ 	</select>
+ 	<delete id="delete">
+ 		delete from board
+ 		where no=#{no}
+ 	</delete>
+ 	<insert id="addReply" >
+ 		insert into reply(no, board_no, content, writer, reg_date)
+ 		values(SEQ_REPLY.nextval, #{board_no} , #{content}, #{writer}, sysdate)
+ 	</insert>
+ 	
+ 	<select id="getReply" resultType="dto.Reply">
+ 		select * from reply
+ 		where board_no=#{board_no}
+ 		order by ${sort} desc
+ 	</select>
+ 	<update id="incRecommend">
+ 		update reply set recommend=recommend+1 
+ 		where no=#{no}
+ 	</update>
+ 	<insert id="insertFile">
+ 		insert into T_FILE(no, board_no, original_file_name, stored_file_path, file_size)
+ 		values(seq_file.nextval, #{board_no},#{original_file_name},#{stored_file_path},#{file_size})
+ 	</insert>
+ 	<select id="selectFile" resultType="dto.T_File">
+ 	select * from t_file
+ 	where board_no=#{board_no}
+ 	</select>
+</mapper>

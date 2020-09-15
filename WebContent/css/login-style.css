@@ -1,0 +1,88 @@
+@charset "UTF-8";
+@import "myreset.css";
+@import "header.css";
+@import "footer.css";
+@import "mycommon.css";
+
+
+#login-form{
+	width: 470px;
+	margin: 0 auto;
+}
+#login-form ul .login-logo{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 80px;
+}
+#login-form ul .login-logo img{
+	height: 44px;
+}
+#login-form ul li{
+	margin-bottom: 14px;
+}
+#login-form ul .inp input{
+	height: 51px;
+	font-size: 12px;
+	padding: 10px 35px 10px 15px;
+}
+
+#login-form ul li>input{
+	width: 100%;
+}
+#login-form ul li input[type="submit"]{
+	height: 61px;
+	background-color: #03c75a;
+	font-size: 24px;
+	color: #fff;
+	margin-top: 30px;
+	border: none;
+}
+#login-form ul .check-info{
+	display: flex;
+	justify-content: space-between;
+}
+/* //체크박스 */
+#login-form ul .check-info span{
+	margin-left: 24px;
+}
+
+#login-form ul .check-info input{
+	display: none;
+}
+
+#login-form ul .check-info input + label{
+	display: inline-block;
+	
+	background: url("../images/check_icon_2.svg");
+	background-repeat:  no-repeat;
+	background-position: 0,center;
+	background-size: 20px; 
+}
+#login-form ul .check-info input:checked + label{
+	background: url("../images/check_icon_1.svg");
+	background-repeat:  no-repeat;
+	background-position: 0,center;
+	background-size: 20px;
+}
+
+
+#login-form ul .find-info{
+	display: flex;
+	justify-content: center;
+	
+}
+
+#login-form ul .find-info span{
+	font-size: 13px;
+	color: #bbb;
+	padding: 0 14px;
+}
+
+#login-form ul .msg{
+	color: red;
+	font-size: 14px;
+}
+
+
+
+

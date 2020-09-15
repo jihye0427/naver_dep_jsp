@@ -1,0 +1,85 @@
+@charset "UTF-8";
+@import "myreset.css";
+@import "header.css";
+@import "footer.css";
+@import "mycommon.css";
+
+
+#reg-form{
+	width: 470px;
+	margin: 0 auto;
+}
+#reg-form ul li{
+	margin-bottom: 20px;
+}
+#reg-form ul li>*{
+	display: block;
+}
+#reg-form ul li input{
+	width: 100%;
+	height: 51px;
+	padding: 10px;
+	border: 1px solid #dadada;
+}
+/* 가입하기 submit버튼 */
+#reg-form ul li.reg-btn input{
+	height: 61px;
+	background-color: #03c75a;
+	border: none;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 700;
+}
+#reg-form ul li.reg-logo{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 80px;
+}
+#reg-form ul li.reg-logo img{
+	height: 44px;
+}
+.msg1{
+	color: blue;
+	display: none;
+}
+.msg2, .msg3{
+	color: red;
+	display: none;
+}
+
+#reg-form ul li.reg-id input{
+	background: url("../images/id-badge-regular.svg");
+	background-repeat: no-repeat;
+	background-size: 30px;
+	background-position: right;
+	background-origin: content-box;
+}
+#reg-form ul li.reg-pw input{
+	background: url("../images/lock-solid.svg");
+	background-repeat: no-repeat;
+	background-size: 30px;
+	background-position: right;
+	background-origin: content-box;
+}
+#reg-form ul li.reg-pw-check input{
+	background: url("../images/lock-solid_check.svg");
+	background-repeat: no-repeat;
+	background-size: 30px;
+	background-position: right;
+	background-origin: content-box;
+}
+#reg-form ul li.reg-name input{
+	background: url("../images/user-tie-solid.svg");
+	background-repeat: no-repeat;
+	background-size: 30px;
+	background-position: right;
+	background-origin: content-box;
+}
+#reg-form ul li.reg-email input{
+	background: url("../images/envelope-solid.svg");
+	background-repeat: no-repeat;
+	background-size: 30px;
+	background-position: right;
+	background-origin: content-box;
+}
+
